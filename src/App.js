@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Button, Container, Row, Col, } from 'react-bootstrap';
+import { SearchForm } from './Components/SearchForm';
+import { Display } from './Components/Display'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+    <div className='wrapper bg-dark text-warning'>
+      <Container>
+        <Row>
+          <Col>
+            <h1 className='text-center mt-5'> My Movie collection </h1>
+          </Col>
+        </Row>
+        <hr />
+
+
+        {/* form  */}
+        <SearchForm />
+
+        {/* table */}
+        <Display />
+
+      </Container>
+    </div>
+  )
+}
 export default App;
